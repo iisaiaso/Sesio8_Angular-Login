@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sesion8-login';
+  
+  Opciones =['Home','Support','Contac']
+
+  usuario = 'Angular'
+  password = '123456'
+  validacion(){
+
+  }
 }
