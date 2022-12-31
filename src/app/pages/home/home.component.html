@@ -1,0 +1,35 @@
+<div class="container mt-3 login"> 
+    <div class="contenedor">
+      <div class="p-5">
+        <h1 class="text-center mb-3">Login</h1>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label pt-3"><strong>Usuario: </strong> </label>
+          <div class="col-sm-8 ms-5">
+            <input type="text" #user>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label pt-3"><strong>Password:</strong>  </label>
+          <div class="col-sm-8 ms-5">
+            <input type="password" #pass>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="" (click)="validacion(user.value, pass.value)"><strong>LOGIN</strong></button>
+        </div>
+      </div>
+      
+    </div>
+    <div class="pe-5 ps-5 pb-5">
+      <div *ngIf="condicion else incorrecto">
+        <p>{{mensaje}}</p>
+        <div *ngFor="let menu of opcion">
+          <a href="">{{menu}}</a>
+        </div>
+      </div>
+      <ng-template #incorrecto>
+        <p class="msn">{{mensajeFalse}}</p>
+      </ng-template>
+    </div>
+  </div>
+  
